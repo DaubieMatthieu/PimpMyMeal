@@ -5,8 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.example.pimpmymeal.R;
+import com.example.pimpmymeal.buttonFunction.NavigationsButtons;
 
-public class GeneratorActivity extends AppCompatActivity {
+public class GeneratorActivity extends NavigationsButtons {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

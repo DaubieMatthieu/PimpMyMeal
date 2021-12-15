@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:gravity="top"
+    android:weightSum="5"
+    android:background="@drawable/button_custom_navigation">
+
+
+    <ImageView
+        android:id="@+id/LogoButton"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/button_custom_navigation"
+        android:paddingVertical="2dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/propotype_5" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        />
+
+    <ImageButton
+        android:id="@+id/OptionsButton"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/button_custom_navigation"
+        android:onClick="MenuClicked"
+
+        android:paddingVertical="5dp"
+        android:scaleType="fitCenter"
+        android:scaleX="1.2"
+        android:scaleY="1.2"
+        android:src="@drawable/ic_baseline_menu_24" />
+
+</LinearLayout>
