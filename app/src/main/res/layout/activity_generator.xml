@@ -8,14 +8,16 @@
     tools:context=".ui.GeneratorActivity">
 
     <include layout="@layout/header"/>
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Generator"
-        android:layout_weight="1"
         />
 
     <include layout="@layout/footer"/>
+
+
 
 </LinearLayout>

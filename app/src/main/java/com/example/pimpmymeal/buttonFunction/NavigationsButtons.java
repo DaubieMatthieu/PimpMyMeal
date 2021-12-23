@@ -1,9 +1,7 @@
 package com.example.pimpmymeal.buttonFunction;
 
 import android.content.Intent;
-import android.os.Debug;
 import android.util.Log;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
@@ -14,11 +12,7 @@ import com.example.pimpmymeal.ui.ProfileActivity;
 import com.example.pimpmymeal.ui.SearchActivity;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.view.menu.MenuWrapperICS;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
 import android.widget.PopupMenu;
 import android.widget.Toast;
 
@@ -57,15 +51,15 @@ public class NavigationsButtons extends AppCompatActivity implements PopupMenu.O
     @Override
     public boolean onMenuItemClick(MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.HelpItem:
+            case R.id.helpItem:
                 Log.d("Items", "Help Clicked");
                 Toast.makeText(this, "Help Clicked", Toast.LENGTH_SHORT).show();
                 return true;
-            case R.id.SettingsItem:
+            case R.id.settingsItem:
                 Log.d("Items", "Settings Clicked");
                 Toast.makeText(this, "Settings Clicked", Toast.LENGTH_SHORT).show();
                 return true;
-            case R.id.LogOutItem:
+            case R.id.logOutItem:
                 Log.d("Items", "Log Out Clicked");
                 Toast.makeText(this, "Log Out Clicked", Toast.LENGTH_SHORT).show();
                 return true;
