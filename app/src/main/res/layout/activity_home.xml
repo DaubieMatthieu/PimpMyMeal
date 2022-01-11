@@ -7,7 +7,10 @@
     android:layout_height="match_parent"
     tools:context=".ui.HomeActivity">
 
-    <include layout="@layout/header"/>
+    <com.example.pimpmymeal.buttonFunction.Header
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/header"/>
 
     <TextView
         android:id="@+id/textView"
@@ -16,7 +19,10 @@
         android:text="@string/app_title"
         />
 
-    <include layout="@layout/footer"/>
+    <com.example.pimpmymeal.buttonFunction.Footer
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/footer"/>
 
 
 </LinearLayout>
