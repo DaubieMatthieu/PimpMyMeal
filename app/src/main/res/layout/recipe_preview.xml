@@ -23,7 +23,7 @@
             android:maxLines="1"
             android:text="@string/recipe_name_description"
             android:textAlignment="center"
-            android:textSize="@dimen/size_section_title"
+            android:textSize="@dimen/size_small_title"
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
