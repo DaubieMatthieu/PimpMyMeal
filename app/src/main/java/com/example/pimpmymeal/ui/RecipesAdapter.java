@@ -1,6 +1,7 @@
 package com.example.pimpmymeal.ui;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,9 +24,17 @@ public class RecipesAdapter extends ArrayAdapter<Recipe> {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
+        Context context = getContext();
         Recipe recipe = getItem(position);
-        if (convertView == null) convertView = LayoutInflater.from(getContext())
+        if (convertView == null) convertView = LayoutInflater.from(context)
                 .inflate(R.layout.recipe_preview, parent, false);
+
+        FrameLayout recipeContainer = convertView.findViewById(R.id.recipe_container);
+        recipeContainer.setOnClickListener(view -> {
+            Intent intent = new Intent(context, RecipeActivity.class);
+            intent.putExtra("recipe", recipe);
+            context.startActivity(intent);
+        });
         TextView recipeName = convertView.findViewById(R.id.recipe_name);
         recipeName.setText(recipe.name);
         ImageView recipeImage = convertView.findViewById(R.id.recipe_image);

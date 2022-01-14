@@ -8,13 +8,15 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Recipe {
+// If a corresponding Ingredient object is implemented, it will need to be serializable as well
+public class Recipe implements Serializable {
     public final String name;
     public final String edamamUri;
     public final String imageUri;
-    private Bitmap image;
+    private transient Bitmap image;
     public final String source;
     public final String sourceUri;
     public final ArrayList<String> ingredients = new ArrayList<>();
