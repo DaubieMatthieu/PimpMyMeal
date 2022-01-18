@@ -1,7 +1,28 @@
 <resources>
+    <!-- TODO organize all this by sections -->
     <string name="app_name">Pimp My Meal</string>
-    <string name="app_title">Pimp My Meal</string>
     <string name="current_api_key">Current API key</string>
     <string name="recipe_name_description">Recipe name</string>
     <string name="recipe_image_description">Recipe Image</string>
+    <string name="help">Help</string>
+    <string name="settings">Settings</string>
+    <string name="login">Login</string>
+    <string name="log_out">Log out</string>
+    <string name="sign_in">Sign in</string>
+    <string name="sign_up">Sign up</string>
+    <string name="username_hint">Username…</string>
+    <string name="password_hint">Password…</string>
+    <string name="confirm_password_hint">Confirm Password…</string>
+    <string name="register">Register</string>
+    <string name="already_have_an_account_btn">Already have an account</string>
+    <string name="don_t_have_an_account_btn">Don\'t have an account?</string>
+    <string name="generator">Generator</string>
+    <string name="user">User</string>
+    <string name="home_activity_navigation">Home activity navigation</string>
+    <string name="generator_activity_navigation">Generator activity navigation</string>
+    <string name="search_activity_navigation">Search activity navigation</string>
+    <string name="profile_activity_navigation">Profile activity navigation</string>
+    <string name="logo_image">Logo image</string>
+    <string name="header_menu_button">Header menu button</string>
+    <string name="search">Search</string>
 </resources>

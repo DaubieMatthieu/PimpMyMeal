@@ -12,6 +12,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PimpMyMeal">
         <activity
+            android:name=".ui.SignInActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.SignUpActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".ui.GeneratorActivity"
             android:exported="true" />
         <activity
@@ -23,11 +35,6 @@
         <activity
             android:name=".ui.HomeActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 
