@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- General -->
+    <dimen name="size_big_title">35sp</dimen>
+    <dimen name="padding_big_title">15dip</dimen>
+    <dimen name="size_medium_title">25sp</dimen>
+    <dimen name="padding_medium_title">13dip</dimen>
+    <dimen name="size_small_title">18sp</dimen>
+    <dimen name="padding_small_title">10dip</dimen>
+    <dimen name="size_paragraph">5sp</dimen>
+    <dimen name="padding_paragraph">2dip</dimen>
+    <!-- Authentication forms -->
+    <!-- TODO reuse general values instead of creating new ones -->
+    <dimen name="big_title_padding_bottom">50dp</dimen>
+    <dimen name="big_title_text_size">50sp</dimen>
+    <dimen name="auth_form_btn_vertical_padding">5dp</dimen>
+    <dimen name="auth_form_main_item_text_size">25sp</dimen>
+    <dimen name="auth_form_et_vertical_padding">2dp</dimen>
+    <dimen name="auth_form_et_horizontal_padding">10dp</dimen>
+    <dimen name="auth_form_margin_bottom">30dp</dimen>
+    <dimen name="login_activities_padding">10dp</dimen>
+    <dimen name="small_btn_text_size">15sp</dimen>
+</resources>

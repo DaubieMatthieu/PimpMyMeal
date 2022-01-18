@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_gravity="bottom"
+    android:orientation="horizontal"
+    android:weightSum="4">
+
+    <ImageButton
+        android:id="@+id/homeButtonNavigation"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/button_custom_navigation"
+        android:backgroundTintMode="add"
+        android:contentDescription="@string/home_activity_navigation"
+        android:onClick="goToHomeActivity"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_baseline_home_24" />
+
+    <ImageButton
+        android:id="@+id/recipeButtonNavigation"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/button_custom_navigation"
+        android:contentDescription="@string/generator_activity_navigation"
+        android:onClick="goToGeneratorActivity"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_baseline_shopping_cart_24"
+        android:textSize="11sp" />
+
+    <ImageButton
+        android:id="@+id/fridgeButtonNavigation"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/button_custom_navigation"
+        android:contentDescription="@string/search_activity_navigation"
+        android:onClick="goToSearchActivity"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_baseline_local_dining_24" />
+
+    <ImageButton
+        android:id="@+id/userButtonNavigation"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/button_custom_navigation"
+        android:contentDescription="@string/profile_activity_navigation"
+        android:onClick="goToProfileActivity"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_baseline_account_circle_24" />
+
+</LinearLayout>
