@@ -3,6 +3,8 @@
     <string name="app_name">Pimp My Meal</string>
     <string name="current_api_key">Current API key</string>
     <string name="recipe_name_description">Recipe name</string>
+    <string name="recipe_source_description">Recipe source</string>
+    <string name="browse_recipe">Browse recipe</string>
     <string name="recipe_image_description">Recipe Image</string>
     <string name="help">Help</string>
     <string name="settings">Settings</string>

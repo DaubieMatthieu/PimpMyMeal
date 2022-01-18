@@ -8,16 +8,17 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.util.ArrayList;
+import java.io.Serializable;
 
-public class Recipe {
+// If a corresponding Ingredient object is implemented, it will need to be serializable as well
+public class Recipe implements Serializable {
     public final String name;
     public final String edamamUri;
     public final String imageUri;
-    private Bitmap image;
+    private transient Bitmap image;
     public final String source;
     public final String sourceUri;
-    public final ArrayList<String> ingredients = new ArrayList<>();
+    public final String[] ingredients;
 
     public Recipe(JSONObject jsonObject) throws JSONException {
         this(jsonObject, true);
@@ -33,9 +34,9 @@ public class Recipe {
         JSONArray ingredientsJson = jsonObject.getJSONArray("ingredientLines");
         // Later on we might want to use the "ingredients" key instead
         // which gives ingredients as objects (so with more information on each one).
-        for (int i = 0; i < ingredientsJson.length(); i++) {
-            ingredients.add(ingredientsJson.getString(i));
-        }
+        ingredients = new String[ingredientsJson.length()];
+        for (int i = 0; i < ingredientsJson.length(); i++)
+            ingredients[i] = ingredientsJson.getString(i);
         // More info can be extracted from the json response.
     }
 

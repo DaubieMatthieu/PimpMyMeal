@@ -1,4 +1,5 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/recipe_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="8dip">
@@ -22,7 +23,7 @@
             android:maxLines="1"
             android:text="@string/recipe_name_description"
             android:textAlignment="center"
-            android:textSize="@dimen/size_section_title"
+            android:textSize="@dimen/size_small_title"
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
