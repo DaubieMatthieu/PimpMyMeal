@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- TextViews -->
+    <dimen name="size_activity_title">35sp</dimen>
+    <dimen name="padding_activity_title">15dip</dimen>
+    <dimen name="size_section_title">18sp</dimen>
+    <dimen name="padding_section_title">10dip</dimen>
+    <dimen name="size_paragraph">5sp</dimen>
+    <dimen name="padding_paragraph">2dip</dimen>
+    <!-- Images -->
+    <dimen name="size_image_height">200dip</dimen>
+    <dimen name="size_image_width">@dimen/size_image_height</dimen>
+    <!-- Authentication forms -->
     <dimen name="big_title_padding_bottom">50dp</dimen>
     <dimen name="big_title_text_size">50sp</dimen>
     <dimen name="auth_form_btn_vertical_padding">5dp</dimen>
