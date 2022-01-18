@@ -8,5 +8,6 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="background_white">#ECDCBD</color>
-    <color name="background_buttons_login">#19000000</color>
+    <color name="auth_form_item_background">#19000000</color>
+    <color name="light_grey">#8DFFFFFF</color>
 </resources>

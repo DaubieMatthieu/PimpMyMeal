@@ -1,17 +1,12 @@
-package com.example.pimpmymeal.buttonFunction;
+package com.example.pimpmymeal.ui.buttonFunction;
 
 import android.content.Context;
 import android.content.Intent;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.PopupMenu;
-import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 
@@ -22,10 +17,6 @@ import com.example.pimpmymeal.ui.ProfileActivity;
 import com.example.pimpmymeal.ui.SearchActivity;
 
 public class Footer extends LinearLayout {
-
-    public static final String TAG = Footer.class.getSimpleName();
-
-    private ImageButton homeButton, profileButton, recipeButton, searchButton;
 
     public Footer(Context context) {
         super(context);
@@ -52,56 +43,36 @@ public class Footer extends LinearLayout {
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         inflater.inflate(R.layout.footer, this);
 
-        homeButton = (ImageButton) findViewById(R.id.homeButtonNavigation);
-        profileButton = (ImageButton) findViewById(R.id.userButtonNavigation);
-        recipeButton = (ImageButton) findViewById(R.id.recipeButtonNavigation);
-        searchButton = (ImageButton) findViewById(R.id.fridgeButtonNavigation);
+        ImageButton homeButton = findViewById(R.id.homeButtonNavigation);
+        ImageButton profileButton = findViewById(R.id.userButtonNavigation);
+        ImageButton recipeButton = findViewById(R.id.recipeButtonNavigation);
+        ImageButton searchButton = findViewById(R.id.fridgeButtonNavigation);
 
-        homeButton.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                GoToHomeActivity(view);
-            }
-        });
+        homeButton.setOnClickListener(this::goToHomeActivity);
 
-        profileButton.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                GoToProfileActivity(view);
-            }
-        });
+        profileButton.setOnClickListener(this::goToProfileActivity);
 
-        recipeButton.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                GoToGeneratorActivity(view);
-            }
-        });
+        recipeButton.setOnClickListener(this::goToGeneratorActivity);
 
-        searchButton.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                GoToSearchActivity(view);
-            }
-        });
+        searchButton.setOnClickListener(this::goToSearchActivity);
     }
 
-    public void GoToHomeActivity(View view) {
+    public void goToHomeActivity(View view) {
         Intent intent = new Intent(view.getContext(), HomeActivity.class);
         view.getContext().startActivity(intent);
     }
 
-    public void GoToProfileActivity(View view) {
+    public void goToProfileActivity(View view) {
         Intent intent = new Intent(view.getContext(), ProfileActivity.class);
         view.getContext().startActivity(intent);
     }
 
-    public void GoToSearchActivity(View view) {
+    public void goToSearchActivity(View view) {
         Intent intent = new Intent(view.getContext(), SearchActivity.class);
         view.getContext().startActivity(intent);
     }
 
-    public void GoToGeneratorActivity(View view) {
+    public void goToGeneratorActivity(View view) {
         Intent intent = new Intent(view.getContext(), GeneratorActivity.class);
         view.getContext().startActivity(intent);
     }

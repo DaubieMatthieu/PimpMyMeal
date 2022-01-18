@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="50dp"
-    android:gravity="top"
-    android:weightSum="5"
-    android:background="@drawable/button_custom_navigation">
-
+    android:layout_gravity="top"
+    android:background="@drawable/button_custom_navigation"
+    android:orientation="horizontal"
+    android:weightSum="5">
 
     <ImageView
         android:id="@+id/logoButton"
@@ -15,6 +13,7 @@
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:background="@drawable/button_custom_navigation"
+        android:contentDescription="@string/logo_image"
         android:paddingVertical="2dp"
         android:scaleType="fitCenter"
         android:src="@mipmap/logo_header" />
@@ -23,8 +22,7 @@
         android:id="@+id/headerEmptySpace"
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="3"
-        />
+        android:layout_weight="3" />
 
     <ImageButton
         android:id="@+id/optionsButton"
@@ -32,7 +30,8 @@
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:background="@drawable/button_custom_navigation"
-        android:onClick="SignUpBackClicked"
+        android:contentDescription="@string/header_menu_button"
+        android:onClick="signUpBackClicked"
         android:scaleType="fitCenter"
         android:src="@drawable/ic_baseline_menu_24" />
 

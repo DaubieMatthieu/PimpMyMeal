@@ -1,4 +1,4 @@
-package com.example.pimpmymeal.buttonFunction;
+package com.example.pimpmymeal.ui.buttonFunction;
 
 import android.content.Intent;
 import android.util.Log;
@@ -16,30 +16,32 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.widget.PopupMenu;
 import android.widget.Toast;
 
-public class NavigationsButtons extends AppCompatActivity implements PopupMenu.OnMenuItemClickListener{
+//TODO there might be a way to simplify all this
+public class NavigationButtons extends AppCompatActivity implements PopupMenu.OnMenuItemClickListener{
 
-    public void GoToHomeActivity(View view) {
+    public void goToHomeActivity(View view) {
         Intent intent = new Intent(this, HomeActivity.class);
         startActivity(intent);
     }
 
-    public void GoToProfileActivity(View view) {
+    public void goToProfileActivity(View view) {
         Intent intent = new Intent(this, ProfileActivity.class);
         startActivity(intent);
     }
 
-    public void GoToSearchActivity(View view) {
+    public void goToSearchActivity(View view) {
         Intent intent = new Intent(this, SearchActivity.class);
         startActivity(intent);
     }
 
-    public void GoToGeneratorActivity(View view) {
+    public void goToGeneratorActivity(View view) {
         Intent intent = new Intent(this, GeneratorActivity.class);
         startActivity(intent);
     }
     
-    public void MenuClicked(View view)
+    public void onMenuClicked(View view)
     {
+        //TODO is it useful ? might remove it
         Toast.makeText(view.getContext(), "Menu Clicked", Toast.LENGTH_SHORT).show();
         PopupMenu menu = new PopupMenu(this, view);
         getMenuInflater().inflate(R.menu.menu_config, menu.getMenu());
@@ -63,7 +65,6 @@ public class NavigationsButtons extends AppCompatActivity implements PopupMenu.O
                 Log.d("Items", "Log Out Clicked");
                 Toast.makeText(this, "Log Out Clicked", Toast.LENGTH_SHORT).show();
                 return true;
-
             default:
                 return false;
         }

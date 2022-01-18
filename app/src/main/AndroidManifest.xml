@@ -10,10 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PimpMyMeal">
         <activity
-            android:name=".LoginActivitySignIn"
+            android:name=".ui.SignInActivity"
             android:exported="false" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".ui.SignUpActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
