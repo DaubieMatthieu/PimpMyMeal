@@ -1,26 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/light_pink"
     android:orientation="vertical"
     tools:context=".ui.SearchActivity">
 
     <com.example.pimpmymeal.ui.buttonFunction.Header
         android:id="@+id/header"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="50dp" />
 
-    <TextView
-        android:id="@+id/textView"
+    <LinearLayout
+        android:layout_above="@id/footer"
+        android:layout_below="@id/header"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:text="@string/search" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_big_title"
+            android:text="@string/search_activity_title"
+            android:textAlignment="center"
+            android:textSize="@dimen/size_big_title" />
+
+        <EditText
+            android:id="@+id/search_edit_frame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/padding_small_title"
+            android:layout_marginBottom="@dimen/padding_small_title"
+            android:background="@drawable/search_box_shape"
+            android:hint="@string/search_hint"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:padding="@dimen/padding_small_title"
+            android:textSize="@dimen/size_small_title" />
+
+        <Button
+            android:id="@+id/launch_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/launch_search" />
+
+        <GridView
+            android:id="@+id/recipes_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:numColumns="2"
+            tools:listitem="@layout/recipe_preview" />
+    </LinearLayout>
 
     <com.example.pimpmymeal.ui.buttonFunction.Footer
+        android:layout_alignParentBottom="true"
         android:id="@+id/footer"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="50dp" />
 
-</LinearLayout>
+</RelativeLayout>

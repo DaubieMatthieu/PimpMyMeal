@@ -10,4 +10,5 @@
     <color name="background_white">#ECDCBD</color>
     <color name="auth_form_item_background">#19000000</color>
     <color name="light_grey">#8DFFFFFF</color>
+    <color name="light_pink">#FAF6F7</color>
 </resources>
