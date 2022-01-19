@@ -26,5 +26,8 @@
     <string name="profile_activity_navigation">Profile activity navigation</string>
     <string name="logo_image">Logo image</string>
     <string name="header_menu_button">Header menu button</string>
-    <string name="search">Search</string>
+    <!-- Search Activity -->
+    <string name="search_activity_title">Search for recipes !</string>
+    <string name="search_hint">Ex: pasta, zucchini, mushrooms…</string>
+    <string name="launch_search">Launch search !</string>
 </resources>
