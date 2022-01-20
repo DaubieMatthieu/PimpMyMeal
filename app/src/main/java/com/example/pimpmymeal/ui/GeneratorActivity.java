@@ -5,8 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.example.pimpmymeal.R;
-import com.example.pimpmymeal.ui.buttonFunction.Footer;
-import com.example.pimpmymeal.ui.buttonFunction.Header;
 
 public class GeneratorActivity extends AppCompatActivity {
 

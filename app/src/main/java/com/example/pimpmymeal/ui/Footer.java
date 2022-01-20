@@ -1,4 +1,4 @@
-package com.example.pimpmymeal.ui.buttonFunction;
+package com.example.pimpmymeal.ui;
 
 import android.content.Context;
 import android.content.Intent;
@@ -11,10 +11,6 @@ import android.widget.LinearLayout;
 import androidx.annotation.Nullable;
 
 import com.example.pimpmymeal.R;
-import com.example.pimpmymeal.ui.GeneratorActivity;
-import com.example.pimpmymeal.ui.HomeActivity;
-import com.example.pimpmymeal.ui.ProfileActivity;
-import com.example.pimpmymeal.ui.SearchActivity;
 
 public class Footer extends LinearLayout {
 
@@ -28,10 +24,6 @@ public class Footer extends LinearLayout {
 
     public Footer(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-    }
-
-    public Footer(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
-        super(context, attrs, defStyleAttr, defStyleRes);
     }
 
     public void initFooter() {
@@ -49,11 +41,8 @@ public class Footer extends LinearLayout {
         ImageButton searchButton = findViewById(R.id.fridgeButtonNavigation);
 
         homeButton.setOnClickListener(this::goToHomeActivity);
-
         profileButton.setOnClickListener(this::goToProfileActivity);
-
         recipeButton.setOnClickListener(this::goToGeneratorActivity);
-
         searchButton.setOnClickListener(this::goToSearchActivity);
     }
 
