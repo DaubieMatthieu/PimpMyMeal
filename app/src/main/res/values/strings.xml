@@ -1,7 +1,13 @@
 <resources>
-    <!-- TODO organize all this by sections -->
     <string name="app_name">Pimp My Meal</string>
     <string name="current_api_key">Current API key</string>
+    <!-- User Preferences Keys -->
+    <string name="diets_pref">Diet Preference</string>
+    <string name="username_pref">Username Preference</string>
+    <string name="password_pref">Password Preference</string>
+    <string name="fav_recipes_pref">Favorite Recipes Preference</string>
+    <string name="recipes_to_try_pref">Try Later Recipes Preference</string>
+    <!-- TODO organize all this by sections -->
     <string name="recipe_name_description">Recipe name</string>
     <string name="recipe_source_description">Recipe source</string>
     <string name="browse_recipe">Browse recipe</string>
