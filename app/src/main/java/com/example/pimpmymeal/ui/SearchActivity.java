@@ -9,8 +9,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.pimpmymeal.R;
 import com.example.pimpmymeal.services.ApiRepository;
-import com.example.pimpmymeal.ui.buttonFunction.Footer;
-import com.example.pimpmymeal.ui.buttonFunction.Header;
 
 public class SearchActivity extends AppCompatActivity {
 

@@ -6,7 +6,7 @@
     android:orientation="vertical"
     tools:context=".ui.HomeActivity">
 
-    <com.example.pimpmymeal.ui.buttonFunction.Header
+    <com.example.pimpmymeal.ui.Header
         android:id="@+id/header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
@@ -18,7 +18,7 @@
         android:layout_weight="1"
         android:text="@string/app_name" />
 
-    <com.example.pimpmymeal.ui.buttonFunction.Footer
+    <com.example.pimpmymeal.ui.Footer
         android:id="@+id/footer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />

@@ -1,4 +1,4 @@
-package com.example.pimpmymeal.ui.buttonFunction;
+package com.example.pimpmymeal.ui;
 
 import android.content.Context;
 import android.content.Intent;
