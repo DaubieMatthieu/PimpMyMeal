@@ -7,6 +7,7 @@ import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.pimpmymeal.R;
+import com.example.pimpmymeal.services.UserPreferencesService;
 
 public class SignInActivity extends AppCompatActivity {
 
@@ -14,6 +15,7 @@ public class SignInActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_in);
+        UserPreferencesService.init(this);
     }
 
     public void logInClicked(View v) {
