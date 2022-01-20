@@ -1,9 +1,15 @@
 package com.example.pimpmymeal.ui.buttonFunction;
 
 import android.content.Context;
+import android.content.Intent;
+import android.graphics.Color;
+import android.text.SpannableString;
+import android.text.style.ForegroundColorSpan;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.PopupMenu;
@@ -12,6 +18,8 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 
 import com.example.pimpmymeal.R;
+import com.example.pimpmymeal.ui.SearchActivity;
+import com.example.pimpmymeal.ui.SignInActivity;
 
 public class Header extends LinearLayout {
     private ImageButton loginButton;
@@ -56,11 +64,24 @@ public class Header extends LinearLayout {
                     case R.id.logOutItem:
                         Log.d("Items", "Log Out Clicked");
                         Toast.makeText(loginButton.getContext(), "Log Out Clicked", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(view.getContext(), SignInActivity.class);
+                        view.getContext().startActivity(intent);
                         return true;
                     default:
                         return false;
                 }
             });
+            //Grey out the help and settings menu items since they are not implemented, just making a Toast
+            Menu menuChange = menu.getMenu();
+            MenuItem item = menuChange.getItem(0);
+            SpannableString s = new SpannableString(item.getTitle());
+            s.setSpan(new ForegroundColorSpan(Color.GRAY), 0, s.length(), 0);
+            item.setTitle(s);
+
+            item = menuChange.getItem(1);
+            s = new SpannableString(item.getTitle());
+            s.setSpan(new ForegroundColorSpan(Color.GRAY), 0, s.length(), 0);
+            item.setTitle(s);
             menu.show();
             Log.d("Items", "Menu Clicked");
         });
