@@ -7,7 +7,7 @@
     android:orientation="vertical"
     tools:context=".ui.SearchActivity">
 
-    <com.example.pimpmymeal.ui.buttonFunction.Header
+    <com.example.pimpmymeal.ui.Header
         android:id="@+id/header"
         android:layout_width="match_parent"
         android:layout_height="50dp" />
@@ -54,7 +54,7 @@
             tools:listitem="@layout/recipe_preview" />
     </LinearLayout>
 
-    <com.example.pimpmymeal.ui.buttonFunction.Footer
+    <com.example.pimpmymeal.ui.Footer
         android:layout_alignParentBottom="true"
         android:id="@+id/footer"
         android:layout_width="match_parent"
