@@ -11,7 +11,7 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 public class UserPreferencesService {
-    public static String username, password; //TODO later on the password should be encrypted
+    public static String username, password;
     public static int dietIndex;
     public static Set<Recipe> favoriteRecipes, recipesToTry;
 
@@ -20,7 +20,7 @@ public class UserPreferencesService {
     }
 
     public static boolean isFirstAuth() {
-        return !username.isEmpty();
+        return username==null;
     }
 
     public static void updateUsername(Context context, String username) {

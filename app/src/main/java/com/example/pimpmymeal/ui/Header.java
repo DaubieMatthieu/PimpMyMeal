@@ -47,6 +47,7 @@ public class Header extends LinearLayout {
                         return true;
                     case R.id.logOutItem:
                         Intent intent = new Intent(view.getContext(), SignInActivity.class);
+                        intent.putExtra("launched_from", "header");
                         view.getContext().startActivity(intent);
                         return true;
                     default:
