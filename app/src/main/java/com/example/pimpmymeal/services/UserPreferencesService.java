@@ -12,7 +12,7 @@ import java.util.stream.Collectors;
 
 public class UserPreferencesService {
     public static String username, password; //TODO later on the password should be encrypted
-    public static Set<String> diets;
+    public static int dietIndex;
     public static Set<Recipe> favoriteRecipes, recipesToTry;
 
     public static void init(Context context) {
@@ -33,14 +33,9 @@ public class UserPreferencesService {
         saveString(context, password, R.string.password_pref);
     }
 
-    public static void addDiet(Context context, String diet) {
-        diets.add(diet);
-        saveStringSet(context, diets, R.string.diets_pref);
-    }
-
-    public static void removeDiet(Context context, String diet) {
-        diets.remove(diet);
-        saveStringSet(context, diets, R.string.diets_pref);
+    public static void updateDietIndex(Context context, int dietIndex) {
+        UserPreferencesService.dietIndex = dietIndex;
+        saveInt(context, UserPreferencesService.dietIndex, R.string.diets_pref);
     }
 
     public static void addFavoriteRecipe(Context context, Recipe recipe) {
@@ -67,7 +62,7 @@ public class UserPreferencesService {
         SharedPreferences sharedPref = context.getSharedPreferences(context.getPackageName(), Context.MODE_PRIVATE);
         username = sharedPref.getString(context.getString(R.string.username_pref), null);
         password = sharedPref.getString(context.getString(R.string.password_pref), null);
-        diets = sharedPref.getStringSet(context.getString(R.string.diets_pref), new HashSet<>());
+        dietIndex = sharedPref.getInt(context.getString(R.string.diets_pref), 0);
         Set<String> recipesNameSet = sharedPref.getStringSet(context.getString(R.string.fav_recipes_pref), new HashSet<>());
         favoriteRecipes = recipeSetLoader(context, recipesNameSet);
         Set<String> recipeToTrySet = sharedPref.getStringSet(context.getString(R.string.recipes_to_try_pref), new HashSet<>());
@@ -84,6 +79,13 @@ public class UserPreferencesService {
 
     private static Set<String> recipeListCompressor(Set<Recipe> recipeSet) {
         return recipeSet.stream().map(x -> x.name).collect(Collectors.toSet());
+    }
+
+    private static void saveInt(Context context, int integer, int prefKeyId) {
+        SharedPreferences sharedPref = context.getSharedPreferences(context.getPackageName(), Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPref.edit();
+        editor.putInt(context.getString(prefKeyId), integer);
+        editor.apply();
     }
 
     private static void saveString(Context context, String str, int prefKeyId) {

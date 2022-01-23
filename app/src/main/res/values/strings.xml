@@ -24,8 +24,6 @@
     <string name="register">Register</string>
     <string name="already_have_an_account_btn">Already have an account</string>
     <string name="don_t_have_an_account_btn">Don\'t have an account?</string>
-    <string name="generator">Generator</string>
-    <string name="user">User</string>
     <string name="home_activity_navigation">Home activity navigation</string>
     <string name="generator_activity_navigation">Generator activity navigation</string>
     <string name="search_activity_navigation">Search activity navigation</string>
@@ -36,4 +34,20 @@
     <string name="search_activity_title">Search for recipes !</string>
     <string name="search_hint">Ex: pasta, zucchini, mushrooms…</string>
     <string name="launch_search">Launch search !</string>
+    <!-- Profile Activity -->
+    <string name="username">Username</string>
+    <string name="password">password</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="diet">Diet</string>
+    <string-array name="diets_array">
+        <item>None</item>
+        <item>Balanced</item>
+        <item>High-Fiber</item>
+        <item>High-Protein</item>
+        <item>Low-Carb</item>
+        <item>Low-Fat</item>
+        <item>Low-Sodium</item>
+        <item>Low-Carb</item>
+    </string-array>
 </resources>
