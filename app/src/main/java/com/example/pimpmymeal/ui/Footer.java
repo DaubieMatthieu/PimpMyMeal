@@ -37,12 +37,10 @@ public class Footer extends LinearLayout {
 
         ImageButton homeButton = findViewById(R.id.homeButtonNavigation);
         ImageButton profileButton = findViewById(R.id.userButtonNavigation);
-        ImageButton recipeButton = findViewById(R.id.recipeButtonNavigation);
         ImageButton searchButton = findViewById(R.id.fridgeButtonNavigation);
 
         homeButton.setOnClickListener(this::goToHomeActivity);
         profileButton.setOnClickListener(this::goToProfileActivity);
-        recipeButton.setOnClickListener(this::goToGeneratorActivity);
         searchButton.setOnClickListener(this::goToSearchActivity);
     }
 
@@ -60,10 +58,4 @@ public class Footer extends LinearLayout {
         Intent intent = new Intent(view.getContext(), SearchActivity.class);
         view.getContext().startActivity(intent);
     }
-
-    public void goToGeneratorActivity(View view) {
-        Intent intent = new Intent(view.getContext(), GeneratorActivity.class);
-        view.getContext().startActivity(intent);
-    }
-
 }
