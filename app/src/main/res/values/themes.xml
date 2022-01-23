@@ -3,14 +3,16 @@
     <style name="Theme.PimpMyMeal" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/carmina</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorPrimaryVariant">@color/carmina_variant</item>
+        <item name="colorPrimaryDark">@color/carmina_dark</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/green_theme</item>
-        <item name="colorSecondaryVariant">@color/mystard_theme</item>
+        <item name="colorSecondaryVariant">@color/mustard_theme</item>
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+        <item name="android:windowBackground">@color/light_pink</item>
     </style>
 </resources>
