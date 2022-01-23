@@ -11,4 +11,13 @@
     <color name="auth_form_item_background">#19000000</color>
     <color name="light_grey">#8DFFFFFF</color>
     <color name="light_pink">#FAF6F7</color>
+    <color name="blueTheme">#2F6690</color>
+    <color name="blueThemeEditTexts">#A2B8CA</color>
+    <color name="darkBlueTheme">#17486E</color>
+    <color name="blueThemeLight">#628BAA</color>
+    <color name="greenTheme">#84A07C</color>
+    <color name="greenThemeLight">#A8BFA1</color>
+    <color name="pinkTheme">#B6174B</color>
+    <color name="lightPinkTheme">#D4C5C7</color>
+    <color name="mustardTheme">#FFDC5E</color>
 </resources>
