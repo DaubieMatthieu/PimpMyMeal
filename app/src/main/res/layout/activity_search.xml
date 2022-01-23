@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/light_pink"
     android:orientation="vertical"
     tools:context=".ui.SearchActivity">
 
@@ -32,7 +31,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/padding_small_title"
             android:layout_marginBottom="@dimen/padding_small_title"
-            android:background="@drawable/search_box_shape"
+            android:background="@drawable/edit_text_default_shape"
             android:hint="@string/search_hint"
             android:importantForAutofill="no"
             android:inputType="text"
