@@ -14,9 +14,11 @@
         android:layout_weight="1"
         android:background="@drawable/button_custom_navigation"
         android:contentDescription="@string/logo_image"
-        android:paddingVertical="2dp"
+        
         android:scaleType="fitCenter"
-        android:src="@mipmap/logo_header" />
+        android:scaleX="1.5"
+        android:scaleY="1.5"
+        android:src="@mipmap/logo_header_updated" />
 
     <View
         android:id="@+id/headerEmptySpace"
