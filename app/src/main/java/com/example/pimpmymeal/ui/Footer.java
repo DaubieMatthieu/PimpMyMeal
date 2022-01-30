@@ -39,32 +39,15 @@ public class Footer extends LinearLayout {
         ImageButton profileButton = findViewById(R.id.userButtonNavigation);
         ImageButton searchButton = findViewById(R.id.fridgeButtonNavigation);
 
-        if (getContext().getClass() == HomeActivity.class)
-        {
+        if (getContext().getClass() == HomeActivity.class) {
             homeButton.setEnabled(false);
-            homeButton.setImageResource(R.drawable.home_active);
-            profileButton.setEnabled(true);
-            profileButton.setImageResource(R.drawable.ic_baseline_account_circle_24);
-            searchButton.setEnabled(true);
-            searchButton.setImageResource(R.drawable.ic_baseline_local_dining_24);
-        }
-        else if(getContext().getClass() == ProfileActivity.class)
-        {
-            homeButton.setEnabled(true);
-            homeButton.setImageResource(R.drawable.ic_baseline_home_24);
+            homeButton.setImageResource(R.drawable.ic_baseline_home_active_24);
+        } else if (getContext().getClass() == ProfileActivity.class) {
             profileButton.setEnabled(false);
-            profileButton.setImageResource(R.drawable.profile_active);
-            searchButton.setEnabled(true);
-            searchButton.setImageResource(R.drawable.ic_baseline_local_dining_24);
-        }
-        else if (getContext().getClass() == SearchActivity.class)
-        {
-            homeButton.setEnabled(true);
-            homeButton.setImageResource(R.drawable.ic_baseline_home_24);
-            profileButton.setEnabled(true);
-            profileButton.setImageResource(R.drawable.ic_baseline_account_circle_24);
+            profileButton.setImageResource(R.drawable.ic_baseline_account_circle_active_24);
+        } else if (getContext().getClass() == SearchActivity.class) {
             searchButton.setEnabled(false);
-            searchButton.setImageResource(R.drawable.search_active);
+            searchButton.setImageResource(R.drawable.ic_baseline_image_search_active_24);
         }
         homeButton.setOnClickListener(this::goToHomeActivity);
         profileButton.setOnClickListener(this::goToProfileActivity);
@@ -72,7 +55,6 @@ public class Footer extends LinearLayout {
     }
 
     public void goToHomeActivity(View view) {
-        new Intent();
         Intent intent = new Intent(view.getContext(), HomeActivity.class);
         view.getContext().startActivity(intent);
     }
@@ -85,15 +67,5 @@ public class Footer extends LinearLayout {
     public void goToSearchActivity(View view) {
         Intent intent = new Intent(view.getContext(), SearchActivity.class);
         view.getContext().startActivity(intent);
-    }
-
-    public void disableButton(ImageButton imageButton)
-    {
-        imageButton.setEnabled(false);
-    }
-
-    public void enableButton(ImageButton imageButton)
-    {
-        imageButton.setEnabled(true);
     }
 }
