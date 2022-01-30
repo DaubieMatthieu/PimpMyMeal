@@ -28,7 +28,9 @@ public class SignInActivity extends AppCompatActivity {
         if (!UserPreferencesService.isFirstAuth()) {
             username.setText(UserPreferencesService.username);
             password.setText(UserPreferencesService.password);
-            if (launchedFrom.equals("app-start")) logInClicked(null);
+            if (launchedFrom.equals("app-start")) {
+                UserPreferencesService.onInitCompleted = (b) -> logInClicked(null);
+            }
         } else if (!launchedFrom.equals("sign-up")) signUpBackClicked(null);
     }
 

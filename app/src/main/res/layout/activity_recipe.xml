@@ -18,9 +18,10 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
-        android:id="@+id/source_layout"
+        android:id="@+id/info_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:padding="@dimen/padding_small_title"
         app:layout_constraintTop_toBottomOf="@id/recipe_name">
 
@@ -32,11 +33,34 @@
             android:text="@string/recipe_source_description"
             android:textSize="@dimen/size_small_title" />
 
-        <Button
-            android:id="@+id/browse_recipe"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="@string/browse_recipe" />
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/favorite_recipe_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@android:color/transparent"
+                android:contentDescription="@string/like_button"
+                app:srcCompat="@drawable/ic_baseline_thumb_up_empty_24" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="end">
+
+            <Button
+                android:id="@+id/browse_recipe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/blue_theme"
+                android:text="@string/browse_recipe" />
+        </LinearLayout>
     </LinearLayout>
 
     <ImageView
@@ -47,7 +71,7 @@
         android:paddingVertical="@dimen/padding_big_title"
         android:src="@drawable/ic_baseline_image_search_24"
         app:layout_constraintHeight_percent=".33"
-        app:layout_constraintTop_toBottomOf="@id/source_layout" />
+        app:layout_constraintTop_toBottomOf="@id/info_layout" />
 
     <ListView
         android:id="@+id/ingredients_list"

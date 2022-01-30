@@ -9,6 +9,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.Serializable;
+import java.util.Objects;
 
 // If a corresponding Ingredient object is implemented, it will need to be serializable as well
 public class Recipe implements Serializable {
@@ -19,6 +20,7 @@ public class Recipe implements Serializable {
     public final String source;
     public final String sourceUri;
     public final String[] ingredients;
+    public boolean liked = false;
 
     public Recipe(JSONObject jsonObject) throws JSONException {
         this(jsonObject, true);
@@ -47,5 +49,18 @@ public class Recipe implements Serializable {
     public Bitmap getImage() {
         if (image == null) loadImage();
         return image;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Recipe)) return false;
+        Recipe recipe = (Recipe) o;
+        return edamamUri.equals(recipe.edamamUri);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(edamamUri);
     }
 }

@@ -6,16 +6,20 @@
     <string name="username_pref">Username Preference</string>
     <string name="password_pref">Password Preference</string>
     <string name="fav_recipes_pref">Favorite Recipes Preference</string>
-    <string name="recipes_to_try_pref">Try Later Recipes Preference</string>
-    <!-- TODO organize all this by sections -->
+    <!-- Recipe Activity and Preview -->
     <string name="recipe_name_description">Recipe name</string>
     <string name="recipe_source_description">Recipe source</string>
     <string name="browse_recipe">Browse recipe</string>
     <string name="recipe_image_description">Recipe Image</string>
+    <string name="like_button">like button</string>
+    <!-- Header -->
+    <string name="logo_image">Logo image</string>
+    <string name="header_menu_button">Header menu button</string>
     <string name="help">Help</string>
     <string name="settings">Settings</string>
-    <string name="login">Login</string>
     <string name="log_out">Log out</string>
+    <!-- Authentication Activities -->
+    <string name="log_in">Login</string>
     <string name="sign_in">Sign in</string>
     <string name="sign_up">Sign up</string>
     <string name="username_hint">Username…</string>
@@ -24,12 +28,12 @@
     <string name="register">Register</string>
     <string name="already_have_an_account_btn">Already have an account</string>
     <string name="don_t_have_an_account_btn">Don\'t have an account?</string>
+    <!-- Footer -->
     <string name="home_activity_navigation">Home activity navigation</string>
-    <string name="generator_activity_navigation">Generator activity navigation</string>
     <string name="search_activity_navigation">Search activity navigation</string>
     <string name="profile_activity_navigation">Profile activity navigation</string>
-    <string name="logo_image">Logo image</string>
-    <string name="header_menu_button">Header menu button</string>
+    <!-- Home Activity -->
+    <string name="favorite_recipes">Favorite Recipes</string>
     <!-- Search Activity -->
     <string name="search_activity_title">Search for recipes !</string>
     <string name="search_hint">Ex: pasta, zucchini, mushrooms…</string>
