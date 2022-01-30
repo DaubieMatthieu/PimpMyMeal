@@ -53,7 +53,7 @@
         android:layout_marginBottom="@dimen/auth_form_margin_bottom"
         android:onClick="logInClicked"
         android:paddingVertical="@dimen/auth_form_btn_vertical_padding"
-        android:text="@string/login"
+        android:text="@string/log_in"
         android:textSize="@dimen/auth_form_main_item_text_size" />
 
     <Button

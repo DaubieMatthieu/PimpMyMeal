@@ -13,6 +13,8 @@ import androidx.annotation.Nullable;
 import com.example.pimpmymeal.model.Recipe;
 
 import java.io.IOException;
+import java.util.List;
+import java.util.Set;
 import java.util.concurrent.Callable;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
@@ -41,6 +43,20 @@ public interface Utilities {
             Log.e(e.getClass().getName(), e.getMessage());
         }
         return null;
+    }
+
+    /**
+     * Wait for the UserPreferenceService to be initialized, ie all recipes from the recipesNamesSet
+     * are loaded in the recipeSet to update the UserPreferencesService.initialized boolean
+     *
+     * @param recipesNamesSet Set of recipes names saved on the device
+     * @param recipeSet       List of recipes to be loaded in the session
+     */
+    static void callbackAfterLoad(Set<String> recipesNamesSet, List<Recipe> recipeSet) {
+        new TaskRunner().executeAsync(() -> {
+            while (recipesNamesSet.size() != recipeSet.size()) Thread.sleep(1000);
+            return true;
+        }, (b) -> UserPreferencesService.onInitCompleted.accept(b));
     }
 
     class TaskRunner {
