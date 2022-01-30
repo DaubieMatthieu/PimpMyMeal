@@ -39,6 +39,16 @@ public class Footer extends LinearLayout {
         ImageButton profileButton = findViewById(R.id.userButtonNavigation);
         ImageButton searchButton = findViewById(R.id.fridgeButtonNavigation);
 
+        if (getContext().getClass() == HomeActivity.class) {
+            homeButton.setEnabled(false);
+            homeButton.setImageResource(R.drawable.ic_baseline_home_active_24);
+        } else if (getContext().getClass() == ProfileActivity.class) {
+            profileButton.setEnabled(false);
+            profileButton.setImageResource(R.drawable.ic_baseline_account_circle_active_24);
+        } else if (getContext().getClass() == SearchActivity.class) {
+            searchButton.setEnabled(false);
+            searchButton.setImageResource(R.drawable.ic_baseline_image_search_active_24);
+        }
         homeButton.setOnClickListener(this::goToHomeActivity);
         profileButton.setOnClickListener(this::goToProfileActivity);
         searchButton.setOnClickListener(this::goToSearchActivity);
